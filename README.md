@@ -21,22 +21,24 @@ Pre-requisite for bank service.
           It will download all required depdencies from public maven respository.
  ![image](https://user-images.githubusercontent.com/38679516/159218327-620f1150-0ba6-4a0d-a2b6-35d3e3d748f2.png)
      
+     
+   b. Please find demo folder in repo, and place in C drive.
+  
 
-   b. Open target directory 
+   c. Open target directory 
    
-   c. Application running command
+   d. Application running command
      
       java -jar bank-0.0.1-SNAPSHOT.jar
  ![image](https://user-images.githubusercontent.com/38679516/159218408-b4f2049b-dbf0-4cf3-a6dd-f1ad9331ad57.png)
      
-
-
-   d. H2 console for memory database
+     
+  e. H2 console for memory database
    
    ![image](https://user-images.githubusercontent.com/38679516/159217294-ab788e5b-7947-4861-a593-07c4584a83fc.png)
 
 
-   e. No need password just pressed to connect
+  f. No need password just pressed to connect
    
    ![image](https://user-images.githubusercontent.com/38679516/159217355-53ebe29b-459a-4eb5-a34e-cd7e207dccd2.png)
 
