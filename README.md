@@ -19,16 +19,16 @@ Pre-requisite for bank service.
     a. mvn clean install
     
           It will download all required depdencies from public maven respository.
-          
-          ![image](https://user-images.githubusercontent.com/38679516/159215948-19610486-d4e7-4105-b371-3894ab210d02.png)
+ ![image](https://user-images.githubusercontent.com/38679516/159218327-620f1150-0ba6-4a0d-a2b6-35d3e3d748f2.png)
+     
 
    b. Open target directory 
    
    c. Application running command
      
       java -jar bank-0.0.1-SNAPSHOT.jar
-      
-      ![image](https://user-images.githubusercontent.com/38679516/159217161-7c602bdc-74f4-4315-bd59-245ff26c7d95.png)
+ ![image](https://user-images.githubusercontent.com/38679516/159218408-b4f2049b-dbf0-4cf3-a6dd-f1ad9331ad57.png)
+     
 
 
    d. H2 console for memory database
