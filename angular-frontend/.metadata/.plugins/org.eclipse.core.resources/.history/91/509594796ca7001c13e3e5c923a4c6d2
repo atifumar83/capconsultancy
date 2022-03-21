@@ -1,0 +1,24 @@
+package com.bank.app.serviceImpl;
+
+import org.eclipse.jetty.plus.jndi.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.bank.app.models.Transactions;
+import com.bank.app.repositories.TransactionsRepo;
+
+import come.bank.app.service.ITransactions;
+
+@Service
+public class TransactionService implements ITransactions{
+
+	@Autowired
+	private TransactionsRepo transactionRepo;
+	
+	@Override
+	public Transactions accountTransactions(Transactions transaction) {
+		// TODO Auto-generated method stub
+		return transactionRepo.save(transaction);
+	}
+
+}

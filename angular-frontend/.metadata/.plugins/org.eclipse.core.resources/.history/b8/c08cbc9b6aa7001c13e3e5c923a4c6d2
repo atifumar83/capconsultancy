@@ -1,0 +1,38 @@
+package com.bank.app.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tutorials")
+public class Account {
+
+	@Column(name = "CUSTOMER_ID")
+	private String customerId;
+	@Column(name = "ACCOUNT_ID")
+	private String accountId;
+	@Column(name = "CURRENT_BALANCE")
+	private Double currentBalance;
+	
+	public String getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
+	public String getAccountId() {
+		return accountId;
+	}
+	public void setAccountId(String accountId) {
+		this.accountId = accountId;
+	}
+	public Double getCurrentBalance() {
+		return currentBalance;
+	}
+	public void setCurrentBalance(Double currentBalance) {
+		this.currentBalance = currentBalance;
+	}
+	
+	
+}

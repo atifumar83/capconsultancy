@@ -1,0 +1,5 @@
+package come.core.bank.service;
+
+public interface ITransactions {
+
+}

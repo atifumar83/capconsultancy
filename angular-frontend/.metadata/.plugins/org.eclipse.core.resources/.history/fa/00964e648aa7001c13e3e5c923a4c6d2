@@ -1,0 +1,10 @@
+package come.bank.app.service;
+
+import com.bank.app.models.Account;
+
+public interface IAccount {
+
+	public Account openAccount(Account account);
+	
+	
+}

@@ -1,0 +1,14 @@
+package come.core.bank.service;
+
+import java.util.List;
+
+import com.core.bank.models.Account;
+
+public interface IAccount {
+
+	public List<Account> openAccount(Account account);
+	
+	public Account searchAccounts(String customerId);
+
+	
+}

@@ -1,0 +1,66 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="constainer">
+<div class=""></div>
+<div class="input-group">
+
+      <input
+      [(ngModel)]="accountNo"            
+      type="text"
+      [(disabled)]="enable"
+      class="form-control"
+      placeholder="Account#"
+      aria-label="Manufacturer"
+      aria-describedby="basic-addon1"
+    />
+      <input
+      [(ngModel)]="initialCredit"            
+      type="text"
+      class="form-control"
+      (keydown.enter)="setModel($event.target.value)"
+      placeholder="Initial Credit/deposit"
+      aria-label="Manufacturer"
+      aria-describedby="basic-addon1"
+    />
+
+
+      <input
+      [(ngModel)]="customerId"            
+        
+      type="text"
+      class="form-control"
+      placeholder="Customer ID"
+      aria-label="Manufacturer"
+      aria-describedby="basic-addon1"
+    /><i>Default Customer Id: 1234</i>
+    <button class="btn btn-outline-secondary" (click)="openAccount()" type="button">Open Account</button>
+
+</div>
+<div class="row">
+
+  <div class="col6">
+
+    <table  id="customers">
+      <thead>
+        <th>Account#</th>
+        <th>Balance</th>
+        <th>TransactionType</th>
+        <th>CustomerName</th>
+
+      </thead>
+      <tr *ngFor="let data of transaction">
+
+        <td>{{data.account.accountId}}</td>
+        <td>{{data.balance}}</td>
+        <td>{{data.transactionType}}</td>
+        <td>{{data.account.customer.name}}</td>
+
+
+      </tr>
+
+    </table>
+
+
+  </div>
+
+</div>
+</div>

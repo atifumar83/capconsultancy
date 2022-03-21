@@ -1,0 +1,5 @@
+package com.core.bank.models;
+
+public enum TransactionTypes {
+
+}

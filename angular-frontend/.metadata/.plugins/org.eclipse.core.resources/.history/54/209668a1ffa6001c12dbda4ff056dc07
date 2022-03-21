@@ -1,0 +1,6 @@
+server.port=2008
+
+driverClassName=org.hsqldb.jdbc.JDBCDriver
+url=jdbc:hsqldb:mem:myDb
+username=sa
+password=sa

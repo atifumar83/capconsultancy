@@ -1,0 +1,24 @@
+package com.core.bank.serviceImpl;
+
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.stereotype.Service;
+
+import com.core.bank.models.Account;
+
+import come.core.bank.service.IAccount;
+
+@Service
+public class AccountService implements IAccount{
+
+	@CachePut(cacheNames="account", key="#account.customerId") //updating cache  
+	public Account openAccount(Account account) {
+		return account;
+	}
+
+	@Override
+	public Account searchAccounts(String customerId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,12 @@
+package come.bank.app.service;
+
+import org.eclipse.jetty.plus.jndi.Transaction;
+
+import com.bank.app.models.Transactions;
+
+public interface ITransactions {
+	
+	public Transaction accountTransactions(Transactions account);
+	
+	
+}

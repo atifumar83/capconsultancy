@@ -1,0 +1,7 @@
+package com.bank.app.serviceImpl;
+
+import come.bank.app.service.ICustomer;
+
+public class CustomerServiceImpl implements ICustomer{
+
+}

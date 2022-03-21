@@ -1,0 +1,11 @@
+package come.bank.app.service;
+
+import com.bank.app.models.Transactions;
+
+public interface ITransactions {
+	
+	public Transactions accountTransactions(Transactions account);
+	
+	public Transactions findByAccount(String accountId);
+	
+}

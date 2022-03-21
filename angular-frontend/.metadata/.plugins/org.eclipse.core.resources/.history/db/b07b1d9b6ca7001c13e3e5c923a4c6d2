@@ -1,0 +1,36 @@
+package com.bank.app.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ACCOUNTS")
+public class Account {
+
+	@Column(name = "CUSTOMER_ID")
+	private String customerId;
+	@Id
+	@Column(name = "ACCOUNT_ID")
+	private String accountId;
+	
+	@Column(name = "INITIAL_CREDIT")
+	private Double initialCredit;
+	
+	public String getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
+	public String getAccountId() {
+		return accountId;
+	}
+	public void setAccountId(String accountId) {
+		this.accountId = accountId;
+	}
+
+	
+	
+}

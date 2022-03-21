@@ -1,0 +1,45 @@
+package com.bank.app.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ACCOUNTS")
+public class Account {
+
+//	@Column(name = "CUSTOMER_ID")
+//	private String customerId;
+	
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="CUSTOMER_ID", nullable=true)
+	private Customer customers ;
+	
+	@Id
+	@Column(name = "ACCOUNT_ID")
+	private String accountId;
+	
+	@Column(name = "INITIAL_CREDIT")
+	private Double initialCredit;
+	
+
+	public String getAccountId() {
+		return accountId;
+	}
+	public void setAccountId(String accountId) {
+		this.accountId = accountId;
+	}
+	public Double getInitialCredit() {
+		return initialCredit;
+	}
+	public void setInitialCredit(Double initialCredit) {
+		this.initialCredit = initialCredit;
+	}
+
+	
+	
+}

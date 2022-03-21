@@ -1,0 +1,5 @@
+package come.bank.app.service;
+
+public interface ICustomer {
+
+}

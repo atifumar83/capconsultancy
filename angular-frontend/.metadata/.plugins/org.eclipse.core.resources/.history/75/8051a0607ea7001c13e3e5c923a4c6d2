@@ -1,0 +1,20 @@
+package com.bank.app.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.bank.app.models.Account;
+import com.bank.app.models.Customer;
+
+@Repository
+public interface CustomersRepo extends JpaRepository<Customer, String>{
+
+	@Query(
+			  value = "SELECT * FROM CUSTOMER T INNER JOIN ACCOUNT A on T.CUSTOMER_ID=A.CUSTOMER_ID WHERE T.CUSTOMER_ID='1234'", 
+			  nativeQuery = true)
+	public List<Account> findByCustomerId();
+	
+}

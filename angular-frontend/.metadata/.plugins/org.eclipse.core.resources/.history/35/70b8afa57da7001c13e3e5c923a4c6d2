@@ -1,0 +1,14 @@
+package com.bank.app.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.bank.app.models.Account;
+import com.bank.app.models.Customer;
+
+public interface CustomersRepo extends JpaRepository<Customer, String>{
+
+	public List<Account> findByCustomerId();
+	
+}

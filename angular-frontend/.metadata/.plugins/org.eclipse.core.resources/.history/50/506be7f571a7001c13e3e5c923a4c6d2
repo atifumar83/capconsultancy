@@ -1,0 +1,7 @@
+package com.bank.app.models;
+
+public enum TransactionTypes {
+
+	Deposit,
+	Withdraw
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+<fullyQualifiedTypeName name="org.eclipse.jetty.plus.jndi.Transaction"/>
+<fullyQualifiedTypeName name="come.core.bank.service.ITransactions"/>
+<fullyQualifiedTypeName name="org.springframework.cache.annotation.EnableCaching"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+<fullyQualifiedTypeName name="come.core.bank.service.IAccount"/>
+<fullyQualifiedTypeName name="org.springframework.cache.annotation.Cacheable"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="com.core.bank.models.Account"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="com.bank.app.repositories.AccountRepo"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="com.bank.app.repositories.TransactionsRepo"/>
+<fullyQualifiedTypeName name="com.bank.app.serviceImpl.TransactionService"/>
+<fullyQualifiedTypeName name="com.bank.app.models.TransactionTypes"/>
+<fullyQualifiedTypeName name="com.bank.app.repositories.CustomersRepo"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="com.bank.app.models.Transactions"/>
+<fullyQualifiedTypeName name="come.bank.app.service.ITransactions"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="come.bank.app.service.ICustomer"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.bank.app.models.Customer"/>
+<fullyQualifiedTypeName name="javax.persistence.MapsId"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+<fullyQualifiedTypeName name="java.util.Optional"/>
+</qualifiedTypeNameHistroy>

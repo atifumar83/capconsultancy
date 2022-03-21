@@ -1,0 +1,8 @@
+package come.bank.app.service;
+
+import com.bank.app.models.Customer;
+
+public interface ICustomer {
+	
+	public Customer findByCustomer(String customerId);
+}

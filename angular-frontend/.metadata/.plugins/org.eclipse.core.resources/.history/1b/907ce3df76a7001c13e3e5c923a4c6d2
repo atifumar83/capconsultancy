@@ -1,0 +1,18 @@
+package com.bank.app.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.bank.app.models.Account;
+import com.bank.app.models.Transactions;
+
+@Repository
+public interface AccountRepo extends JpaRepository<Account, String>{
+
+	@Query(
+			  value = "SELECT * FROM TRANSACTIONS T WHERE T.TRANSACTION_TYPE = 'Deposit' ORDER BY T.TRANSACTION_DATE DESC LIMIT 1", 
+			  nativeQuery = true)
+	public Transactions findTransactionLatestByDate();
+	
+}

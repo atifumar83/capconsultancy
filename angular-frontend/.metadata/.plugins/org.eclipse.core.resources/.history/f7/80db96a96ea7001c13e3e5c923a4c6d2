@@ -1,0 +1,35 @@
+package com.bank.app.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
+
+import com.bank.app.models.Account;
+import com.bank.app.repositories.AccountRepo;
+import com.bank.app.repositories.TransactionsRepo;
+
+import come.bank.app.service.IAccount;
+
+@Service
+public class AccountService implements IAccount{
+
+	@Autowired
+	private AccountRepo accountRepo;
+	
+	@Autowired
+	private TransactionsRepo transactionRepo;
+	
+	@CachePut(cacheNames="account", key="#account.customerId") //updating cache  
+	public Account openAccount(Account account) {
+		return accountRepo.save(account);
+	}
+
+	@Cacheable(cacheNames="account", key="#customerId")  
+	public List<Account> searchAccounts(String customerId) {
+		return null;
+	}
+
+}

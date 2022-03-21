@@ -1,0 +1,20 @@
+package com.bank.app.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.bank.app.models.Account;
+
+import come.bank.app.service.ICustomer;
+
+@Service
+public class CustomerServiceImpl implements ICustomer{
+
+	@Override
+	public List<Account> findByCustomer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

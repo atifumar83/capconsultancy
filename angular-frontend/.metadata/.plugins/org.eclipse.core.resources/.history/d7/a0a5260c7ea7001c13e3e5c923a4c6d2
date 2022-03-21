@@ -1,0 +1,52 @@
+package com.bank.app.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.bank.app.models.Account;
+import com.bank.app.models.TransactionTypes;
+import com.bank.app.models.Transactions;
+import com.bank.app.repositories.AccountRepo;
+import com.bank.app.repositories.CustomersRepo;
+
+import come.bank.app.service.IAccount;
+
+@Service
+public class AccountService implements IAccount{
+
+	@Autowired
+	private AccountRepo accountRepo;
+	
+	@Autowired
+	private TransactionService transactionService;
+	
+	@Autowired
+	private CustomersRepo customerRepo;
+	
+	public Account openAccount(Account account) {
+		
+		Account newAccount = accountRepo.save(account);
+		if(account.getInitialCredit()!=null&&account.getInitialCredit()>0) {
+			
+			Transactions latestTransaction = transactionService.findByAccount(account.getAccountId());
+			
+			Transactions transaction = new Transactions();
+			transaction.setAccountId(newAccount.getAccountId());
+			transaction.setAmount(newAccount.getInitialCredit());
+			if(latestTransaction!=null)
+			transaction.setBalance(newAccount.getInitialCredit()+latestTransaction.getBalance());
+			else
+				transaction.setBalance(newAccount.getInitialCredit());
+			transaction.setTransactionType(TransactionTypes.Deposit.toString());
+			this.transactionService.accountTransactions(transaction);
+		}
+		return newAccount;
+	}
+
+	public List<Account> searchAccounts(String customerId) {
+		return null;
+	}
+
+}
